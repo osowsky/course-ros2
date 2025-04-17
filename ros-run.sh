@@ -24,7 +24,7 @@ fi
 
 # Build package.
 echo "Building package ${1}..."
-colcon build --packages-select ${1}
+colcon build --executor sequential --packages-select ${1}
 echo "...done!"
 
 # Reload package environment.
@@ -35,7 +35,6 @@ echo "...done!"
 # Run exec file.
 echo "Running executable ${2}..."
 ros2 run ${@}
-echo "${@}"
 echo "...done!"
 echo ""
 
