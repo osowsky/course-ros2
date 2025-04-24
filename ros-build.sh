@@ -27,5 +27,10 @@ fi
 # Build either a specific package or all them.
 colcon build --executor sequential ${BARGS}
 echo "...done!"
+
+# Reload package environment.
+echo "Reloading devel environment..."
+source install/setup.bash
+echo "...done!"
 exit 0
 
