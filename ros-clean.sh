@@ -5,7 +5,7 @@
 if [ "${1}" == "" ]; then
 	echo "Usage: ${0} all"
 	echo ""
-	echo "Remove built directories (build/, install/, and log/)."
+	echo "Remove aux. directories (build/, install/, and log/)."
 	echo ""
 	echo "Options:"
 	echo ""
@@ -17,7 +17,7 @@ fi
 # Build all packages?
 RARGS="build/ install/ log/"
 if [ "${1}" == "all" ]; then
-	echo "Removing folders ${RARGS}..."
+	echo "Removing aux. folders ${RARGS}..."
 	BARGS=""
 else
 	echo "ERROR: all argument must be typed."

@@ -14,6 +14,12 @@ Scripts in `~/Documents/ros2_ws/`
 >
 > Build a specific package or all packages.
 
+> ./ros-clean.sh
+>
+> Usage: ./ros-clean.sh all
+>
+> Remove aux. directories (build/, install/, and log/).
+
 > ./ros-run.sh
 >
 > Usage: ./ros-run.sh \<pkg-name> \<exec-name> [args]
