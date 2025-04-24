@@ -12,6 +12,7 @@ if [ "${1}" == "" ]; then
 	echo " <pkg-name>	the name of the ROS2 package."
 	echo " <exec-name>	the name of the ROS2 executable."
 	echo " args       	arbitrary arguments to the ROS2 executable."
+	echo "    --remap|-r __node:=<node-name>"
 	echo ""
 	exit -1
 fi
@@ -32,9 +33,17 @@ fi
 # source install/setup.bash
 # echo "...done!"
 
-# Run exec file.
-echo "Running executable ${2}..."
-ros2 run ${@}
+# Run exec file (with arguments).
+if [ "${#}" -eq 2 ]; then
+	echo "Running executable ${2}..."
+	ros2 run ${@}
+else
+	pname=${1}
+	ename=${2}
+	shift 2
+	echo "Running executable ${ename} with args ${@}..."
+	ros2 run ${pname} ${ename} --ros-args ${@}
+fi
 echo "...done!"
 echo ""
 
