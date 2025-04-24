@@ -1,3 +1,6 @@
+// RCL means ROS Client Library.
+// DDS means Data Distributed Service.
+
 #include "rclcpp/rclcpp.hpp"
 
 class MyNode : public rclcpp::Node

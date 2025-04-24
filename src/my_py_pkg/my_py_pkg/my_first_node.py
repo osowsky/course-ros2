@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 #
+# RCL means ROS Client Library.
+# DDS means Data Distributed Service.
+#
 
 import rclpy
 from rclpy.node import Node
