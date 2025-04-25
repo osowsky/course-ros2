@@ -19,9 +19,10 @@ class RobotNewsStationNode( Node ):
     def __init__( self ):
         super().__init__( "robot_news_station" )
         self.robot_name_ = "C3P0"
-        self.publisher_ = self.create_publisher( String, TOPIC_NAME, MSG_BUF_SIZE )
+        self.publisher_ = self.create_publisher( String, TOPIC_NAME,
+                                                 MSG_BUF_SIZE )
         self.timer_ = self.create_timer( PUB_FREQ, self.publish )
-        self.get_logger().info( "RobotNewsStation node has been started." )
+        self.get_logger().info( "RobotNewsStation has been started." )
 
     def publish( self ):
         msg = String()
