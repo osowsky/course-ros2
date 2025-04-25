@@ -3,9 +3,10 @@
 
 import rclpy
 from rclpy.node import Node
-from example_interfaces.msg import String
+
 # ros2 interface show example_interfaces/msg/String
 # string.data <- name of the variable in string class. 
+from example_interfaces.msg import String
 
 MSG_BUF_SIZE = 10
 TOPIC_NAME = "robot_news"

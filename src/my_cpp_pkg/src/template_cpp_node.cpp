@@ -2,19 +2,19 @@
 
 class MyCustomNode : public rclcpp::Node // MODIFY NAME
 {
-public:
-    MyCustomNode() : Node("node_name") // MODIFY NAME
-    {
-    }
+    public:
+        MyCustomNode() : Node( "node_name" ) // MODIFY NAME
+        {
+        };
 
-private:
+    private:
 };
 
-int main(int argc, char **argv)
+int main( int argc, char **argv )
 {
-    rclcpp::init(argc, argv);
+    rclcpp::init( argc, argv );
     auto node = std::make_shared<MyCustomNode>(); // MODIFY NAME
-    rclcpp::spin(node);
+    rclcpp::spin( node );
     rclcpp::shutdown();
     return 0;
-}
+};
