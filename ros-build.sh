@@ -3,7 +3,7 @@
 
 # Display help?
 if [ "${1}" == "" ]; then
-	echo "Usage: ${0} <pkg-name>|all"
+	echo "Usage: ${0} <pkg-name>|all [args]"
 	echo ""
 	echo "Build a specific package or all packages."
 	echo ""
@@ -11,6 +11,9 @@ if [ "${1}" == "" ]; then
 	echo ""
 	echo " <pkg-name>	the name of the ROS2 package."
 	echo " all      	all packages will be built."
+	echo " args       	arbitrary arguments to the ROS2 executable."
+	echo "    --symlink-install"
+
 	echo ""
 	exit -1
 fi
@@ -25,6 +28,10 @@ else
 fi
 
 # Build either a specific package or all them.
+if [ "${#}" -ge 2 ]; then
+	shift 1
+	BARGS+=" ${@}"
+fi
 colcon build --executor sequential ${BARGS}
 echo "...done!"
 
@@ -33,4 +40,3 @@ echo "Reloading devel environment..."
 source install/setup.bash
 echo "...done!"
 exit 0
-
