@@ -33,3 +33,23 @@ Scripts in `~/Documents/ros2_ws/src/`
 > Usage: ./ros-pkg-create.sh <pkg-name> <build-type>
 > 
 > Create the package environment for a new ROS2 package.
+
+## Nice ROS2 commands (introspect topics with CLI)
+
+> ros2 topic list
+>
+> ros2 topic info \<topic-name>
+>
+> ros2 topic echo \<topic-name>
+>
+> ros2 interface show \<topic-type>
+>
+> ros2 topic hz \<topic-name> *hz means hertz*
+>
+> ros2 topic bw \<topic-name> *bw means bandwidth*
+>
+> ros2 topic pub -r \<hz-value> \<topic-name> \<topic-type> "{name: value}" *pub means publish*
+>
+> ros2 node list
+>
+> ros2 node info \<node-name>
