@@ -55,3 +55,11 @@ Scripts in `~/Documents/ros2_ws/src/`
 > ros2 node info \<node-name>
 >
 > ros2 run \<pkg-name> \<exec-name> --ros-args -r __node:=\<new-node-name> -r \<topic-name>:=\<new-topic-name> *-r means --remap*
+
+## Playing with Turtlesim example
+
+> ros2 run turtlesim turtlesim_node *start turtlesim node*
+>
+> ros2 run turtlesim turtle_teleop_key *start turtlesim keyboard interface*
+
+
