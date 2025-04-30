@@ -62,4 +62,10 @@ Scripts in `~/Documents/ros2_ws/src/`
 >
 > ros2 run turtlesim turtle_teleop_key *start turtlesim keyboard interface*
 
+## Replay topics with bags files
 
+> ros2 bag record [-o \<dir-name>] [-a | \<topic-name-01> \<topic-name-02> \<topic-name-nn>]
+>
+> ros2 bag info \<dir-name>
+>
+> ros2 bag play \<dir-name>
