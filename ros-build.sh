@@ -37,6 +37,6 @@ echo "...done!"
 
 # Reload package environment.
 echo "Reloading devel environment..."
-source install/setup.bash
+source ./install/setup.bash
 echo "...done!"
 exit 0
