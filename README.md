@@ -69,3 +69,10 @@ Scripts in `~/Documents/ros2_ws/src/`
 > ros2 bag info \<dir-name>
 >
 > ros2 bag play \<dir-name>
+
+## Nice ROS2 commands (introspect services with CLI)
+
+>
+> ros2 service list
+>
+> ros2 service call \<service-name> \<service-type> "{name: value}"
