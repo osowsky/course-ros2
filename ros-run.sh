@@ -23,16 +23,6 @@ if [ "${2}" == "" ]; then
 	exit -1
 fi
 
-# # Build package.
-# echo "Building package ${1}..."
-# colcon build --executor sequential --packages-select ${1}
-# echo "...done!"
-
-# # Reload package environment.
-# echo "Reloading devel environment..."
-# source install/setup.bash
-# echo "...done!"
-
 # Run exec file (with arguments).
 if [ "${#}" -eq 2 ]; then
 	echo "Running executable ${2}..."

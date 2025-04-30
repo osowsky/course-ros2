@@ -20,7 +20,7 @@ TOPIC_NAME_PUB = "number_count"
 class NumberCounterNode( Node ):
     def __init__( self ):
         super().__init__( "number_counter" )
-        self.number_counter_ = 0
+        self.number_ = 0
         self.publisher_ = self.create_publisher( Int64, TOPIC_NAME_PUB,
                                                  MSG_BUF_SIZE )
         self.subscriber_ = self.create_subscription( Int64, TOPIC_NAME_SUB,
@@ -36,9 +36,9 @@ class NumberCounterNode( Node ):
 
     def callback_number( self, msg: Int64 ):
         self.get_logger().info( str( msg.data ) )
-        self.number_counter_ += 1
+        self.number_+= msg.data
         msg_pub = Int64()
-        msg_pub.data = self.number_counter_
+        msg_pub.data = self.number_
         self.publisher_.publish( msg_pub )
 
 
