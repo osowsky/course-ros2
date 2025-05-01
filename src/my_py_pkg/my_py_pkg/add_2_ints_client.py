@@ -18,6 +18,7 @@ class Add2IntsClientNode( Node ):
     def __init__( self ):
         super().__init__( "add_2_ints_client" )
         self.client_ = self.create_client( AddTwoInts, SERVICE_NAME )
+        self.get_logger().info( "ADD2IntsClient has been started." )
 
     def call_add_2_ints( self, a, b ):
         while not self.client_.wait_for_service( 1.0 ):

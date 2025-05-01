@@ -15,6 +15,7 @@ SERVICE_NAME = "add_2_ints"
 def main( args = None ):
     rclpy.init( args = args )
     node = Node( "add_2_ints_client_no_oop" )
+    node.get_logger().info( "ADD2IntsClient has been started." )
 
     client = node.create_client( AddTwoInts, SERVICE_NAME )
     while not client.wait_for_service( 1.0 ):
