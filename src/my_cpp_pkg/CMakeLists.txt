@@ -38,6 +38,9 @@ ament_target_dependencies( add_2_ints_server rclcpp example_interfaces )
 add_executable( add_2_ints_client_no_oop src/add_2_ints_client_no_oop.cpp )
 ament_target_dependencies( add_2_ints_client_no_oop rclcpp example_interfaces )
 
+add_executable( add_2_ints_client src/add_2_ints_client.cpp )
+ament_target_dependencies( add_2_ints_client rclcpp example_interfaces )
+
 #
 install( TARGETS
   cpp_node
@@ -45,6 +48,7 @@ install( TARGETS
   smartphone
   add_2_ints_server
   add_2_ints_client_no_oop
+  add_2_ints_client
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

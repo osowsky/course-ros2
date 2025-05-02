@@ -76,3 +76,7 @@ Scripts in `~/Documents/ros2_ws/src/`
 > ros2 service list
 >
 > ros2 service call \<service-name> \<service-type> "{name: value}"
+>
+> ros2 service type \<service-name>
+>
+> ros2 interface show \<service-type>

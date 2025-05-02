@@ -12,7 +12,9 @@ if [ "${1}" == "" ]; then
 	echo " <pkg-name>	the name of the ROS2 package."
 	echo " <exec-name>	the name of the ROS2 executable."
 	echo " args       	arbitrary arguments to the ROS2 executable."
-	echo "    --remap|-r __node:=<node-name>"
+	echo "    --remap|-r __node:=<new-node-name>"
+	echo "    --remap|-r <topic-name>:=<new-topic-name>"
+	echo "    --remap|-r <service-name>:=<new-service-name>"
 	echo ""
 	exit -1
 fi
